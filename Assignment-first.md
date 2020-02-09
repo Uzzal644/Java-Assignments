@@ -10,47 +10,46 @@ new int[] { 1, 2, 3, 4};  //int type anonymous array
 
 An example to illustrate the concept of anonymous array is given below :
 
-class Test { 
-    public static void main(String[] args) 
-    { 
+class Test { <br/>
+    public static void main(String[] args) <br/>
+    { </br>
         sum(new int[]{ 1, 2, 3 });  //anonymous array
-    } 
-    public static void sum(int[] a) 
-    { 
-        int total = 0; 
-          for (int i : a) { 
-            total = total + i; 
-         System.out.println("The sum is:" + total); 
-    } 
+    } </br>
+    public static void sum(int[] a) <br/>
+    { <br/>
+        int total = 0; <br/>
+          for (int i : a) { <br/>
+            total = total + i; <br/>
+         System.out.println("The sum is:" + total); <br/>
+    } <br/>
   }
-}
-
 
 
 ## Default method in Interface
 Interface could only have abstract method before Java8, so implementation of a new method done in interface have to be provided in implementing class too.So, to overcome the problem,default methods were used. 
 For example : <br/>
-interface default_interface
-{
-  public void cube(int a);
-  default void show()
-  {
-    system.out.println ("Default method");
-  }
-}
-class default_class implements default_interface
-{
-  public void cube(int a)
-  {
-    System.out.prinln(a * a * a);
-  }
-  public static void main(String[] a)
-  {
-    DefaultClass d = new DefaultClass();
-    d.cube();
-    d.show();
-  }
-}
+<br/>
+interface default_interface <br/>
+{ <br/>
+  public void cube(int a); <br/>
+  default void show() <br/>
+  { <br/>
+    system.out.println ("Default method"); <br/>
+  } <br/>
+} <br/>
+class default_class implements default_interface <br/>
+{ <br/>
+  public void cube(int a) <br/>
+  { <br/>
+    System.out.prinln(a * a * a); <br/>
+  } <br/>
+  public static void main(String[] a) <br/>
+  { <br/>
+    DefaultClass d = new DefaultClass(); <br/>
+    d.cube(); <br/>
+    d.show(); <br/>
+  } <br/>
+} <br/>
 
 
 
@@ -88,76 +87,76 @@ class sample implements InheritA, InheritB
 
 ## Nested Interfaces
 The interface which is declared inside another interface or a class is known as ""nested interface"".A nested interface can be declared as public, private or protected. This differs from a top-level interface, which must either be declared as public or use the default access level, as previously described. It is used to resolve the namesop by grouping related interface together. When a nested interface is used outside of its enclosing scope, it must be qualified by the name of the class or interface of which it is a member.
-For example:
-interface NestedA
-{
-  void dis();
-  interface NestedB
-  {
-    void show();
-  }
-}
-class Test implements NestedA NestedB
-{
-  void show()
-  {
-    System.out.println("Nested interface")
-  }
-  public static void main (String[] args)
-  {
-    NestedA.NestedB ob = new Test();
-    ob.show();
-  }
-} 
+For example:<br/> 
+<br/>
+interface NestedA <br/>
+{ <br/>
+  void dis(); <br/>
+  interface NestedB <br/>
+  { <br/>
+    void show(); <br/>
+  } <br/>
+} <br/>
+class Test implements NestedA NestedB <br/>
+{ <br/>
+  void show() <br/>
+  { <br/>
+    System.out.println("Nested interface"); <br/>
+  } <br/>
+  public static void main (String[] args) <br/>
+  { <br/>
+    NestedA.NestedB ob = new Test(); <br/>
+    ob.show(); <br/>
+  } <br/>
+} <br/>
 
 
 
 ## How to create your own exception class ?
 Sometimes we need to design our own exceptions as per the application requirement. This is possible in Java.
 
-All exceptions must be  child of Throwable. If we want to write a checked exception that is automtically enforced by the handle, we need to extend the Exception class. If we want to write a runtime exception, we need to extend the RuntimeException class. We can define our own exception class as below: 
-
-class MyException extends Exception{
-}
-
-*Example:*
-class NoException extends Exception
-{
-  NoException (String s)
-  {
-    super (s);
-  }
-}
-class TestException
-{
-  static void checkStudent(String college) throws NonException
-  {
-    if (college != "GCES")
-    throw new NonException ("Not a GCES student");
-    else
-    System.out.println ("Welcome to GCES");
-  }
-  public static void main (String args[])
-  {
-    try
-    {
-      checkStudent( "PEC");
-    }
-    catch(Exception e)
-    {
-      System.out.println("Exception occured: "+ e);
-    }
-    System.out.println("END");
-  }
-}
+All exceptions must be  child of Throwable. If we want to write a checked exception that is automtically enforced by the handle, we need to extend the Exception class. If we want to write a runtime exception, we need to extend the RuntimeException class. We can define our own exception class as below: <br/> 
+<br/>
+class MyException extends Exception{ <br/>
+} <br/>
+<br/>
+*Example:* <br/>
+class NoException extends Exception <br/>
+{ <br/>
+  NoException (String s) <br/>
+  { <br/>
+    super (s); <br/>
+  } <br/>
+} <br/>
+class TestException <br/>
+{ <br/>
+  static void checkStudent(String college) throws NonException <br/>
+  { <br/>
+    if (college != "GCES") <br/>
+    throw new NonException ("Not a GCES student"); <br/>
+    else <br/>
+    System.out.println ("Welcome to GCES"); <br/>
+  } <br/>
+  public static void main (String args[]) <br/>
+  { <br/>
+    try <br/>
+    { <br/>
+    checkStudent( "PEC"); <br/>
+    } <br/>
+    catch(Exception e) <br/>
+    { <br/>
+      System.out.println("Exception occured: "+ e); <br/>
+    } <br/>
+    System.out.println("END"); <br/>
+  } <br/>
+} <br/>
 
 
 
 ## Difficult Questions : 
 
 1. Explain about *Access Protection Mechanism* with suitable example. <br/>
-<br/>
-2. Write short notes on: *Casting Astract class*.       
+2. Write short notes on: *Casting Astract class*. 
        
 
 
