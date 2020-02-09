@@ -56,32 +56,33 @@ class default_class implements default_interface <br/>
 ## Inheritance in interface
 One interface can inherit another by use of the keyword **extends** . The synatx is the same as for inheriting classes. When a class implements an interface that inherits another
 interface,it must provide implementations for all methods required by the interface inheritance chain.
-For example :
-interface InheritA
-{
-  void M1();
-}
-interface InheritB
-{
-  void M2();
-}
-class sample implements InheritA, InheritB
-{
-  public void M1()
-  {
-    System.out.println("Message M1");
-  }
-  public void M2()
-  {
-    System.out.println("Message M2");
-  }
-  public static void main (String[] a)
-  {
-    sample obj = new sample();
-    obj.M1();
-    obj.M2();
-  }
-}
+For example : <br/>
+<br/>
+interface InheritA <br/>
+{ <br/>
+  void M1(); <br/>
+} <br/>
+interface InheritB <br/>
+{ <br/>
+  void M2(); <br/>
+} <br/>
+class sample implements InheritA, InheritB <br/>
+{ <br/>
+  public void M1() <br/>
+  { <br/>
+    System.out.println("Message M1"); <br/>
+  } <br/>
+  public void M2() <br/>
+  { <br/>
+    System.out.println("Message M2"); <br/>
+  } <br/>
+  public static void main (String[] a) <br/>
+  { <br/>
+    sample obj = new sample(); <br/>
+    obj.M1(); <br/>
+    obj.M2(); <br/>
+  } <br/>
+} <br/>
 
 
 
